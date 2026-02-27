@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribers Engine | Premium Selection</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/subscribers.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background: radial-gradient(circle at top right, #1e1b4b, #020617);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sub-engine-container" id="subEngine">
+        <div class="sub-header">
+            <h2>Stay in the Loop</h2>
+            <p>Join our exclusive community and get the latest updates directly in your inbox.</p>
+        </div>
+
+        <form class="sub-form" id="subscriberForm">
+            <div class="input-group">
+                <input type="text" name="name" class="sub-input" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" class="sub-input" placeholder="Your Email" required>
+            </div>
+            <button type="submit" class="sub-button" id="submitBtn">
+                <span>Subscribe Now</span>
+                <div class="loading-dots" style="display: none;">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+            </button>
+        </form>
+
+        <div id="statusMsg" class="status-msg"></div>
+    </div>
+
+    <script src="src/subscribers.js"></script>
+    <script>
+        // Integration snippet
+        const engine = new SubscriberEngine({
+            formId: 'subscriberForm',
+            statusId: 'statusMsg',
+            // The user will replace this with their Google Apps Script URL
+            endpoint: 'YOUR_GOOGLE_SCRIPT_URL'
+        });
+    </script>
+</body>
+</html>
