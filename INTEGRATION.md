@@ -54,6 +54,11 @@ Place this where you want the form to appear:
 </script>
 ```
 
-## 3. Customize
+## 3. How the Connection Works
+- **Bound Permissions**: Because you opened the script editor from within your Google Sheet (Step 1.2), the script is "bound" to that sheet. This means it automatically has permission to write to it.
+- **Security**: The Web App URL is the "key." You don't need to share the raw Google Sheet URL with the website or anyone else. 
+- **Anonymous Access**: By setting access to "Anyone," the website can send data to your sheet without requiring your website visitors to log into a Google account.
+
+## 4. Customize
 - Edit `subscribers.css` to change the colors (variables at the top).
 - Change the text in the HTML to match your brand.
